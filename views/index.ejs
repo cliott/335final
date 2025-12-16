@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<h1>Our App</h1>
+
+<form action="/add" method="POST">
+  <input name="text" required>
+  <button type="submit">Submit</button>
+</form>
+
+<form action="/clear" method="POST">
+  <button type="submit">Clear Database</button>
+</form>
+
+<img src="<%= image %>" width="200">
+
+<ul>
+  <% entries.forEach(e => { %>
+    <li><%= e.text %></li>
+  <% }) %>
+</ul>
+
+</body>
+</html>
